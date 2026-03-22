@@ -1,0 +1,47 @@
+package main;
+
+public class ContaBancaria {
+    private int numero;
+    private String titular;
+    private double saldo;
+    
+    public ContaBancaria(){
+        saldo = 0;
+    }
+    
+    
+    //Metodos a mais, controle de conta...
+    public void setNumero(int entraNumero){
+        this.numero = entraNumero;
+    }
+    public int getNumero(){
+        return this.numero;
+    }
+    
+    public void setTitular(String entraTitular){
+        this.titular = entraTitular;
+    }
+    
+    public String getTitular(){
+        return this.titular;
+    }
+    
+    
+    //metodo principais: sacar, depositar, setar saldo e ver saldo 
+    public void depositar(double entraSaldo){
+        this.saldo += entraSaldo;
+    }
+    public void sacar(double saiSaldo){
+        this.saldo -= saiSaldo;
+    }
+    public double verSaldo(){
+        return this.saldo;
+    }
+    
+    //para que apenas as classes  filhas consigam setar saldo, garante segurança
+    protected void setSaldo(double setarSaldo){
+        this.saldo = setarSaldo;
+    }
+    
+    
+}
