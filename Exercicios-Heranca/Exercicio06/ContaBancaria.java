@@ -29,7 +29,13 @@ public class ContaBancaria {
     
     //metodo principais: sacar, depositar, setar saldo e ver saldo 
     public void depositar(double entraSaldo){
-        this.saldo += entraSaldo;
+        if(entraSaldo<0){
+            //para evitar vslores de deposito negativo
+            System.out.println("Valor de deposito invalido");
+        }
+        else{
+            this.saldo += entraSaldo;
+        }
     }
     public void sacar(double saiSaldo){
         this.saldo -= saiSaldo;
