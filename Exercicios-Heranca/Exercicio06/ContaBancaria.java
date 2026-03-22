@@ -27,7 +27,7 @@ public class ContaBancaria {
     }
     
     
-    //metodo principais: sacar, depositar, setar saldo e ver saldo 
+    //metodo principais: sacar, depositar e ver saldo 
     public void depositar(double entraSaldo){
         if(entraSaldo<0){
             //para evitar vslores de deposito negativo
@@ -43,12 +43,5 @@ public class ContaBancaria {
     public double verSaldo(){
         return this.saldo;
     }
-    
-    //para que apenas as classes  filhas e arquivos de mesmo pacote consigam setar saldo, garante segurança (nesse exemplo a main está no mesmo pacote,
-    //porem em uma aplicação robusta eu iria colocar em outro)
-    protected void setSaldo(double setarSaldo){
-        this.saldo = setarSaldo;
-    }
-    
     
 }
