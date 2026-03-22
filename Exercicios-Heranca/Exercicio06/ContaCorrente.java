@@ -17,7 +17,7 @@ public class ContaCorrente extends ContaBancaria{
             System.out.printf("\nErro, limite ultrapassado...");
         }
         else{
-            super.setSaldo(super.verSaldo() - saiSaldo);
+            super.sacar(saiSaldo);
         }
     }
 }
