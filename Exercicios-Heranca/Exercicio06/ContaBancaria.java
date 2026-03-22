@@ -44,7 +44,8 @@ public class ContaBancaria {
         return this.saldo;
     }
     
-    //para que apenas as classes  filhas consigam setar saldo, garante segurança
+    //para que apenas as classes  filhas e arquivos de mesmo pacote consigam setar saldo, garante segurança (nesse exemplo a main está no mesmo pacote,
+    //porem em uma aplicação robusta eu iria colocar em outro)
     protected void setSaldo(double setarSaldo){
         this.saldo = setarSaldo;
     }
