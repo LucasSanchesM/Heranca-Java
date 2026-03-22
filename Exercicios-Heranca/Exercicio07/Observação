@@ -1,0 +1,5 @@
+Ao fazer este exercicio, inicialmente defini um atributo na classe pai (funcionario) separado para o salario final, os calculos de salario final nas classes filhas (gerente e programador)
+exigiam um setter na classe pai (ja que o salario final é private), porem eu nao poderia apenas coloca-lo, pois dessa forma a Main poderia definir o salario final 
+algo que nao poderia acontecer ja que salario final deve ser apenas um calculo automatico, por isso tive a ideia de usar o conceito de protected que permitiria que apenas filhos ou arquivos do mesmo
+pacote acessassem o metodo setter (isso iria exigir que eu colocasse a main em um pacote separado), tal abordagem seria bem sucedida, porem optei por apenas remover o atributo de salario final,
+pois iria simplificar tudo e mesmo assim atender a demanda
