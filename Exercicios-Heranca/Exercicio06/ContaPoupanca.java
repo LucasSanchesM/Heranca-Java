@@ -16,13 +16,13 @@ public class ContaPoupanca extends ContaBancaria{
             System.out.println("\nO valor informado de saque é maior que o disponivel na conta!");
         }
         else{
-            super.setSaldo(super.verSaldo()-saiSaldo);
+            super.sacar(saiSaldo);
         }
     }
     
     //metodo que adiciona o rendimento na conta
     public void atualizar(){
-        super.setSaldo(super.verSaldo()+(super.verSaldo()*this.rendimento));
+        super.depositar(super.verSaldo()*this.rendimento);
     }
     
     
